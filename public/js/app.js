@@ -240,10 +240,7 @@ function resetGame() {
       clearCanvas();
 }
 
-// NEED A KEY PRESS EVENT LISTENER FOR BODY?? AS LETTER GUESSES
 document.addEventListener("keypress", function (event) {
-      // console.log(event.key);
-
       if (event.target.tagName.toLowerCase() !== "input") {
             handleGuess(event.key);
       }
