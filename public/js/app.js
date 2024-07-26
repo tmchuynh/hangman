@@ -280,7 +280,7 @@ randomWordButton.addEventListener("click", () => {
 });
 
 function getRandomWord() {
-      return random[Math.floor(Math.random() * random.length)];
+      return randomWords[Math.floor(Math.random() * randomWords.length)];
 }
 
 function showModal(message) {
