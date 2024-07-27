@@ -161,11 +161,13 @@ function handleGuess(guess) {
       } else if (guess.length === word.length && guess.match(/^[A-Za-z\s]+$/)) {
             // Full word guess
             if (guess === word) {
-                  endGame(true);
+                  endGame(true); // Correctly guessed the entire word
             } else {
                   lives--;
-                  livesDisplay.textContent = `Lives Left: ${lives}`;
+                  livesDisplay.textContent = `Lives left: ${lives}`;
                   drawHangman(lives);
+
+                  // Check game end condition after updating display
                   checkGameEnd();
             }
       } else {
@@ -244,15 +246,6 @@ function resetGame() {
       clearCanvas();
 }
 
-// NEED A KEY PRESS EVENT LISTENER FOR BODY?? AS LETTER GUESSES
-document.addEventListener("keypress", function (event) {
-      // console.log(event.key);
-
-      if (event.target.tagName.toLowerCase() !== "input") {
-            handleGuess(event.key);
-      }
-});
-
 function checkGameEnd() {
       if (lives === 0) {
             endGame(false); // Lost
@@ -287,7 +280,7 @@ randomWordButton.addEventListener("click", () => {
 });
 
 function getRandomWord() {
-      return randomWords[Math.floor(Math.random() * randomWords.length)];
+      return random[Math.floor(Math.random() * random.length)];
 }
 
 function showModal(message) {
