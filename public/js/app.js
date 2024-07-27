@@ -273,7 +273,6 @@ randomWordButton.addEventListener("click", () => {
 });
 
 function getRandomWord() {
-  // MISSING CODE GOES HERE
   return randomWords[Math.floor(Math.random() * randomWords.length)];
 }
 
