@@ -1,8 +1,4 @@
 body {
-      display: grid;
-      grid-template-rows: 1fr;
-      grid-template-columns: 0.75fr 1.5fr;
-      height: 100vh;
       margin: 0;
       background-color: #f0f0f0;
       font-family: cursive;
@@ -21,23 +17,11 @@ section {
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      position: absolute;
-      height: auto;
-      padding: 5rem;
-      width: 50%;
-      right: 45rem;
-}
-
-section:first-of-type {
-      top: 1.05rem;
-}
-
-section:last-of-type {
-      right: 5rem;
 }
 
 .hangman-container {
       width: 75%;
+      min-height: 50rem;
       margin: 0.25rem 3rem;
       border-radius: 15px;
       border: 2px solid black;
@@ -53,6 +37,7 @@ section:last-of-type {
       margin-bottom: 20px;
       display: flex;
       justify-content: center;
+      max-width: 70%;
       gap: 18px;
       font-size: 24px;
 }
@@ -146,8 +131,8 @@ button,
       border: 2px solid black;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
       border-radius: 15px;
-      width: 50%;
-      height: 15rem;
+      min-width: 100%;
+      min-height: 15rem;
       margin: 2rem;
       text-align: center;
 }

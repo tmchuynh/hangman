@@ -103,6 +103,12 @@ function startGame() {
       context.lineTo(150, 20);
       context.lineTo(150, 50);
       context.stroke();
+
+      document.addEventListener("keypress", function (event) {
+            if (event.target.tagName.toLowerCase() !== "input") {
+                  handleGuess(event.key);
+            }
+      });
 }
 
 function updateWordDisplay() {
@@ -116,7 +122,7 @@ function updateWordDisplay() {
                   wordDisplay.appendChild(h3);
                   correctLetters++;
             } else if (letter === " ") {
-                  const h1 = document.createElement("h1");
+                  const h1 = document.createElement("div");
                   h1.style.padding = "8px";
                   wordDisplay.appendChild(h1);
             } else {
@@ -129,7 +135,7 @@ function updateWordDisplay() {
 
 function handleGuess(guess) {
       if (word === "") {
-            showModal("Error: Please enter or select a word first!");
+            showModal("To start the game, click on the RANDOM WORD button");
             return;
       }
 
@@ -239,15 +245,6 @@ function resetGame() {
       updateWrongGuessedLettersDisplay();
       clearCanvas();
 }
-
-// NEED A KEY PRESS EVENT LISTENER FOR BODY?? AS LETTER GUESSES
-document.addEventListener("keypress", function (event) {
-      // console.log(event.key);
-
-      if (event.target.tagName.toLowerCase() !== "input") {
-            handleGuess(event.key);
-      }
-});
 
 function checkGameEnd() {
       if (lives === 0) {
