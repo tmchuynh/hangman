@@ -25,14 +25,19 @@
             <section>
                   <h1>Classic Hangman</h1>
                   <div class="hangman-container">
-                        <div class="game-info">
-                              <div>
-                                    <p>Guess the word by clicking letters!</p>
-                                    <p class="lives">Lives left: 6</p>
+                        <div class="input-section">
+                              <button id="random-word-button">Random Word</button>
+                        </div>
+                        <div class="guess-section">
+                              <div class="game-info">
+                                    <div>
+                                          <p>Guess the word by clicking letters!</p>
+                                          <p class="lives">Lives left: 6</p>
+                                    </div>
                               </div>
-                              <div class="input-section">
-                                    <button id="random-word-button">Random Word</button>
-                              </div>
+
+                              <input type="text" id="guess-input" placeholder="Enter your guess">
+                              <button id="guess-button">Enter Guess</button>
                         </div>
                         <canvas id="hangmanCanvas" width="200" height="250"></canvas>
                         <div class="word-display" id="word-display">
@@ -41,10 +46,7 @@
                         <div class="letters">
                               <!-- Alphabet buttons for guessing letters -->
                         </div>
-                        <div class="guess-section">
-                              <input type="text" id="guess-input" placeholder="Enter your guess">
-                              <button id="guess-button">Enter Guess</button>
-                        </div>
+
                   </div>
             </section>
 

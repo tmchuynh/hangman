@@ -91,24 +91,6 @@ function startGame() {
 
       updateWordDisplay();
       clearCanvas();
-
-      // Draw gallows
-      context.strokeStyle = "#000";
-      context.lineWidth = 2;
-      context.beginPath();
-      context.moveTo(20, 230);
-      context.lineTo(180, 230);
-      context.moveTo(100, 230);
-      context.lineTo(100, 20);
-      context.lineTo(150, 20);
-      context.lineTo(150, 50);
-      context.stroke();
-
-      document.addEventListener("keypress", function (event) {
-            if (event.target.tagName.toLowerCase() !== "input") {
-                  handleGuess(event.key);
-            }
-      });
 }
 
 function updateWordDisplay() {
@@ -230,6 +212,17 @@ function drawHangman(lives) {
 
 function clearCanvas() {
       context.clearRect(0, 0, canvas.width, canvas.height);
+      // Draw gallows
+      context.strokeStyle = "#000";
+      context.lineWidth = 2;
+      context.beginPath();
+      context.moveTo(20, 230);
+      context.lineTo(180, 230);
+      context.moveTo(100, 230);
+      context.lineTo(100, 20);
+      context.lineTo(150, 20);
+      context.lineTo(150, 50);
+      context.stroke();
 }
 
 function resetGame() {
@@ -299,6 +292,12 @@ guessInput.addEventListener("keypress", function (event) {
             let guess = guessInput.value;
             checkEntireWord(guess);
             guessInput.value = "";
+      }
+});
+
+document.addEventListener("keypress", function (event) {
+      if (event.target.tagName.toLowerCase() !== "input") {
+            handleGuess(event.key);
       }
 });
 

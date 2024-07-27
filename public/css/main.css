@@ -17,11 +17,12 @@ section {
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      padding: 1rem;
 }
 
 .hangman-container {
-      width: 75%;
-      min-height: 50rem;
+      width: 100%;
+      min-height: 55rem;
       margin: 0.25rem 3rem;
       border-radius: 15px;
       border: 2px solid black;
@@ -30,6 +31,11 @@ section {
       align-items: center;
       display: flex;
       flex-direction: column;
+      padding: 1.5rem;
+      position: relative;
+}
+
+canvas {
       padding: 1.5rem;
 }
 
@@ -47,8 +53,11 @@ section {
       flex-wrap: wrap;
       justify-content: center;
       gap: 10px;
-      width: 55%;
       margin: auto;
+      position: absolute;
+      bottom: 5%;
+      width: 100%;
+      padding: 2rem;
 }
 
 .letter {
@@ -116,9 +125,6 @@ button,
 
 .game-info {
       font-size: 16px;
-      font-family: cursive;
-      display: flex;
-      justify-content: space-around;
       width: 100%;
 }
 
