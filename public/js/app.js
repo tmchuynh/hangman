@@ -162,7 +162,7 @@ function handleGuess(guess) {
 function drawHangman(lives) {
       // Draw hangman based on remaining lives
       context.strokeStyle = "#333333";
-      context.lineWidth = 2;
+      context.lineWidth = 3;
       if (lives === 5) {
             context.beginPath();
             context.arc(150, 80, 30, 0, Math.PI * 2);
@@ -213,8 +213,8 @@ function drawHangman(lives) {
 function clearCanvas() {
       context.clearRect(0, 0, canvas.width, canvas.height);
       // Draw gallows
-      context.strokeStyle = "#000";
-      context.lineWidth = 2;
+      context.strokeStyle = "#997248";
+      context.lineWidth = 4;
       context.beginPath();
       context.moveTo(20, 230);
       context.lineTo(180, 230);

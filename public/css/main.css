@@ -1,7 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Caveat:wght@600&family=Teko:wght@300..700&display=swap");
+
+.anton-regular {
+      font-family: "Anton", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+}
+
+.teko-medium {
+      font-family: "Teko", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 500;
+      font-style: normal;
+}
+
 body {
+      letter-spacing: 2px;
       margin: 0;
       background-color: #f0f0f0;
-      font-family: cursive;
+      font-family: "Anton", sans-serif;
       position: relative;
 }
 
@@ -63,8 +79,9 @@ canvas {
 .letter {
       /*   padding: 10px 20px; */
       width: 40px;
-      font-size: 18px;
+      font-size: 24px;
       cursor: pointer;
+      font-weight: 500;
       background-color: #558b6e;
       border-radius: 5px;
       transition: background-color 0.3s ease;
@@ -140,6 +157,7 @@ button,
       min-width: 100%;
       min-height: 15rem;
       margin: 2rem;
+      padding: 2rem;
       text-align: center;
 }
 
