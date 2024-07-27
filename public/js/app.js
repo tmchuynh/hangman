@@ -16,7 +16,7 @@ let word = "";
 let guessedLetters = new Set();
 let lives = 6; // Set initial lives
 
-const random = [
+const wordPhrases = [
       "Giant African mammal",
       "Tall African animal",
       "Vast body of water",
@@ -280,7 +280,7 @@ randomWordButton.addEventListener("click", () => {
 });
 
 function getRandomWord() {
-      return random[Math.floor(Math.random() * random.length)];
+      return wordPhrases[Math.floor(Math.random() * wordPhrases.length)];
 }
 
 function showModal(message) {
